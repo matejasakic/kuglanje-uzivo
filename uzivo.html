@@ -2,73 +2,103 @@
 <html lang="sr">
 <head>
   <meta charset="UTF-8">
-  <title>Rezultati Uživo – Super Liga Srbije</title>
+  <title>Rezultati Uživo – Kuglanje</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      padding: 20px;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 40px 20px;
     }
+
     h1 {
       text-align: center;
       color: #0d47a1;
+      margin-bottom: 50px;
+      font-size: 32px;
     }
-    .match {
-      background: white;
-      border-radius: 12px;
+
+    .liga-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      gap: 40px;
+    }
+
+    .liga-column {
+      background-color: white;
+      flex: 1;
+      min-width: 300px;
       padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    .team {
-      font-size: 20px;
-      font-weight: bold;
+
+    .liga-column h2 {
       text-align: center;
-      margin-bottom: 10px;
+      color: #0d47a1;
+      margin-bottom: 20px;
+      font-size: 22px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
+
+    ul {
+      list-style: none;
+      padding: 0;
     }
-    th, td {
-      padding: 8px;
-      border: 1px solid #ccc;
-      text-align: center;
-      font-size: 14px;
-    }
-    th {
+
+    li {
       background-color: #e3f2fd;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 16px;
+      transition: background-color 0.2s;
+    }
+
+    li:hover {
+      background-color: #bbdefb;
+    }
+
+    @media (max-width: 768px) {
+      .liga-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-<h1>Rezultati Uživo – Super Liga Srbije</h1>
+  <h1>Dobro došli</h1>
 
-<div class="match">
-  <div class="team">KK Vihor 🆚 KK Beograd</div>
-  <table>
-    <tr>
-      <th>Tim</th>
-      <th>Igrač</th>
-      <th>Reg. broj</th>
-      <th>S1</th><th>S2</th><th>S3</th><th>S4</th>
-      <th>Ukupno</th>
-      <th>SP</th>
-      <th>EP</th>
-    </tr>
-    <tr>
-      <td>Domaći</td><td>Kurteš Ranko</td><td>79/V</td><td>99</td><td>54</td><td>53</td><td>153</td><td>359</td><td>1</td><td>0</td>
-    </tr>
-    <tr>
-      <td>Gost</td><td>Daniel Tepša</td><td>1595/V</td><td>104</td><td>153</td><td>154</td><td>106</td><td>517</td><td>3</td><td>1</td>
-    </tr>
-    <!-- Dodaj još 10 igrača ovde -->
-  </table>
-</div>
+  <div class="liga-wrapper">
+
+    <div class="liga-column">
+      <h2>Ženske Lige</h2>
+      <ul>
+        <li onclick="location.href='super-zene.html'">SUPER LIGA</li>
+        <li onclick="location.href='prva-centar-zene.html'">PRVA LIGA SRBIJE – CENTAR</li>
+        <li onclick="location.href='prva-vojvodina-zene.html'">PRVA LIGA SRBIJE – VOJVODINA</li>
+      </ul>
+    </div>
+
+    <div class="liga-column">
+      <h2>Muške Lige</h2>
+      <ul>
+        <li onclick="location.href='super-muskarci.html'">SUPER LIGA</li>
+        <li onclick="location.href='prva-centar-muskarci.html'">PRVA LIGA SRBIJE – CENTAR</li>
+        <li onclick="location.href='prva-vojvodina-muskarci.html'">PRVA LIGA SRBIJE – VOJVODINA</li>
+        <li onclick="location.href='prva-vojvodjanska.html'">PRVA VOJVOĐANSKA LIGA</li>
+        <li onclick="location.href='druga-vojvodjanska.html'">DRUGA VOJVOĐANSKA LIGA</li>
+        <li onclick="location.href='prva-srpska.html'">PRVA SRPSKA LIGA</li>
+      </ul>
+    </div>
+
+  </div>
 
 </body>
 </html>
-
