@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Liga – Muškarci (Uživo)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #0d47a1;
+        }
+        .match-block {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .match-title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .player-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .player-name {
+            width: 30%;
+            font-weight: bold;
+        }
+        .player-data {
+            width: 65%;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Super Liga Srbije – Muškarci</h1>
+
+<div class="match-block">
+    <div class="match-title">KK Beograd 🆚 KK Vojvodina</div>
+
+    <div class="player-row">
+        <div class="player-name">Daniel Tepša</div>
+        <div class="player-data">
+            Reg. broj: 1595/V<br>
+            Setovi: 156 / 163 / 163 / 162<br>
+            Ukupno: 644 – S.P.: 2 – E.P.: 1
+        </div>
+    </div>
+
+    <div class="player-row">
+        <div class="player-name">Boris Kereg</div>
+        <div class="player-data">
+            Reg. broj: 2799/V<br>
+            Setovi: 156 / 152 / 159 / 162<br>
+            Ukupno: 629 – S.P.: 2 – E.P.: 0
+        </div>
+    </div>
+
+    <!-- Dodaj još igrača po istom šablonu -->
+
+</div>
+
+</body>
+</html>
