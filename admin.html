@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudijski panel – Izbor lige i utakmice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fb;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #08306b;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Sudijski panel</h1>
+
+  <label for="liga">Izaberi ligu:</label>
+  <select id="liga" onchange="prikaziUtakmice()">
+    <option value="">-- Odaberi ligu --</option>
+    <option value="super-muskarci">Super Liga Srbije – Muškarci</option>
+    <option value="super-zene">Super Liga Srbije – Žene</option>
+    <option value="kup">Kup Srbije</option>
+  </select>
+
+  <label for="utakmica">Izaberi utakmicu:</label>
+  <select id="utakmica">
+    <option value="">-- Prvo izaberi ligu --</option>
+  </select>
+
+  <button onclick="zapocniUnos()">Započni unos rezultata</button>
+</div>
+
+<script>
+  const utakmice = {
+    "super-muskarci": ["Beograd vs Vojvodina", "Vihor vs Beograd"],
+    "super-zene": ["Jedinstvo vs Pobednik", "Spartak vs Kikinda"],
+    "kup": ["Radnički vs Vihor", "Beograd vs Apatin"]
+  };
+
+  function prikaziUtakmice() {
+    const liga = document.getElementById("liga").value;
+    const utakmicaSelect = document.getElementById("utakmica");
+    utakmicaSelect.innerHTML = "";
+
+    if (utakmice[liga]) {
+      utakmice[liga].forEach(utakmica => {
+        const option = document.createElement("option");
+        option.value = utakmica;
+        option.textContent = utakmica;
+        utakmicaSelect.appendChild(option);
+      });
+    } else {
+      const option = document.createElement("option");
+      option.textContent = "-- Nema dostupnih utakmica --";
+      utakmicaSelect.appendChild(option);
+    }
+  }
+
+  function zapocniUnos() {
+    const liga = document.getElementById("liga").value;
+    const utakmica = document.getElementById("utakmica").value;
+
+    if (!liga || !utakmica) {
+      alert("Molimo izaberite i ligu i utakmicu.");
+      return;
+    }
+
+    alert(`Započinje unos za meč: ${utakmica} (${liga})`);
+    // Ovde kasnije preusmerenje na stranicu za unos rezultata
+  }
+</script>
+
+</body>
+</html>
