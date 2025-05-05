@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Unos rezultata utakmice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f5f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+    .form-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .pair-block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      gap: 20px;
+    }
+    .player-form {
+      flex: 1;
+      background: #f7f9fc;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    .player-form h3 {
+      margin-top: 0;
+      color: #0d47a1;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 12px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #08306b;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Unos rezultata – KK Vihor vs KK Beograd</h1>
+
+<div class="form-container" id="forma">
+
+  <!-- 6 parova -->
+  <div class="pair-block">
+    <div class="player-form">
+      <h3>Igrač domaćin</h3>
+      <input placeholder="Ime i prezime">
+      <input placeholder="Reg. broj">
+      <input placeholder="Set 1">
+      <input placeholder="Set 2">
+      <input placeholder="Set 3">
+      <input placeholder="Set 4">
+      <input placeholder="Ukupno">
+      <input placeholder="S.P.">
+      <input placeholder="E.P.">
+    </div>
+    <div class="player-form">
+      <h3>Igrač gost</h3>
+      <input placeholder="Ime i prezime">
+      <input placeholder="Reg. broj">
+      <input placeholder="Set 1">
+      <input placeholder="Set 2">
+      <input placeholder="Set 3">
+      <input placeholder="Set 4">
+      <input placeholder="Ukupno">
+      <input placeholder="S.P.">
+      <input placeholder="E.P.">
+    </div>
+  </div>
+
+  <!-- Kopiraj blok iznad još 5 puta za 6 parova -->
+
+  <button onclick="sacuvaj()">Sačuvaj rezultate</button>
+
+</div>
+
+<script>
+  function sacuvaj() {
+    alert("Rezultati su sačuvani (test prikaz).");
+    // Ovde će kasnije ići slanje u bazu
+  }
+</script>
+
+</body>
+</html>
