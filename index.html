@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kuglanje Uživo – Prototip</title>
+    <style>
+        body { font-family: sans-serif; background: #f5f7fa; padding: 20px; }
+        .match-card {
+            background: white; padding: 15px; border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1); cursor: pointer;
+        }
+        .teams { display: flex; justify-content: space-between; font-weight: bold; color: #0d47a1; }
+        .score { text-align: center; font-size: 22px; margin: 10px 0; color: #1b5e20; }
+        #details { display: none; background: white; padding: 15px; margin-top: 20px; border-radius: 10px; }
+        .player-row { display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 5px 0; }
+        .player-name { font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Kuglanje Uživo – Mobilni Prototip</h1>
+
+<div class="match-card" onclick="showDetails()">
+    <div class="teams">
+        <span>KK Beograd</span>
+        <span>KK Vojvodina</span>
+    </div>
+    <div class="score">7.5 : 0.5</div>
+    <div style="text-align:center; color:#607d8b;">Klikni za detalje</div>
+</div>
+
+<div id="details">
+    <h2>Detalji meča</h2>
+    <div class="player-row"><span class="player-name">Tepša Daniel</span><span>644 (S.P. 2 | E.P. 1)</span></div>
+    <div class="player-row"><span class="player-name">KeregBarto Boris</span><span>629 (S.P. 2 | E.P. 0)</span></div>
+    <div class="player-row"><span class="player-name">Mateja Šakić</span><span>547 (S.P. 2 | E.P. 0.5)</span></div>
+    <div class="player-row"><span class="player-name">Zdravko Kresović</span><span>547 (S.P. 2 | E.P. 0.5)</span></div>
+    <div class="player-row"><span class="player-name">Bojan Kličarić</span><span>648 (S.P. 3 | E.P. 1)</span></div>
+    <div class="player-row"><span class="player-name">Dragan Gajin</span><span>529 (S.P. 1 | E.P. 0)</span></div>
+</div>
+
+<script>
+    function showDetails() {
+        document.getElementById('details').style.display = 'block';
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</body>
+</html>
